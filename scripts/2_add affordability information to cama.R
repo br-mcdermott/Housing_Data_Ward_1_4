@@ -1,5 +1,11 @@
+wd<-getwd()   # put the current directory in wd
+Sys.setenv(R_USER=wd) # set R_USER to the working directory
+path.expand("~") # now the tilde should point to working directory.
+
+
+
 library(dplyr)
-setwd("C:\\Users\\brigid\\Dropbox\\Advocacy Ministry St A\\Data")
+#setwd("C:\\Users\\brigid\\Dropbox\\Advocacy Ministry St A\\Data")
 
 source("C:\\Users\\brigid\\Dropbox\\Advocacy Ministry St A\\Data\\1_summary create combined CAMA file for Affordable Housing Database.R")
 
