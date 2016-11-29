@@ -252,5 +252,3 @@ print(paste("the number of obs with missing NUM_UNITS is",sum(is.na(cama$NUM_UNI
 print(paste("the number of obs. with NUM_UNITS=0 is",sum(cama$NUM_UNITS==0, na.rm=T),sep=" "))
 #### OK we have replaced all missing NUM_UNITS that we can for now.
 
-print("remove # on next line to save cama ")
-#write.csv(cama,"~/data/cama.csv", row.names=F)

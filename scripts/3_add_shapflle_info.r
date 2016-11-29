@@ -9,27 +9,33 @@
 
 require("maptools")
 require("sp")
+require("rgeos")
 
-
-short    #This is the data frame
+#cama    #This is the data frame
 
 
 #add the new colums
 
-short$ward =0
-short$smd_id =0
+cama$ward =rep(NA, nrow(cama))
+#cama$smd_id =rep(NA, nrow(cama))
 
 std_projection=CRS("+proj=longlat +datum=WGS84")  #any projection will work,
                                                   #this is probably used
                                           
 #get the shapefiles  (this assumes thay are in the working directory)
 
-ward=readShapeSpatial("Ward__2012.shp",proj4string=std_projection)
-smd=readShapeSpatial("Single_Member_District__2013.shp",proj4string=std_projection)
+ward=readShapeSpatial("~/data/Ward__2012.shp",proj4string=std_projection)
+#smd=readShapeSpatial("~/data/Single_Member_District__2013.shp",proj4string=std_projection)
 
-for (i in 1:nrow(short))
+for (i in 1:nrow(cama))
 {
-  point=SpatialPoints(list(short[i,]$X,short[i,]$Y),proj4string=std_projection)
-  short$ward[i] <- over(point,ward)$WARD
-  short$smd_id[i] <- over(point,smd)$SMD_ID
+  point=SpatialPoints(list(cama[i,]$X,cama[i,]$Y),proj4string=std_projection)
+  cama$ward[i] <- over(point,ward)$WARD
+  
 }
+
+
+
+
+cama14<-cama[cama$ward==1 | cama$ward==4,]
+write.csv(cama14, "~/data/cama14.csv", row.names=F)
