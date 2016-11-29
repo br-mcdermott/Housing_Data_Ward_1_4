@@ -103,8 +103,8 @@ affordable<-merge(extract, cama14, by='SSL2')
 ward14<-merge(cama14,extract, by="SSL2", all.x=T)
 names(ward14)[names(ward14)=="ward.x"]<-"ward"
 write.csv(ward14,"~/data/ward14.csv",row.names=F)
-write.csv(ward14[ward14$wardx==1,],"~/data/ward1.csv",row.names=F)
-write.csv(ward14[ward14$wardx==4,],"~/data/ward4.csv",row.names=F)
+write.csv(ward14[ward14$ward==1,],"~/data/ward1.csv",row.names=F)
+write.csv(ward14[ward14$ward==4,],"~/data/ward4.csv",row.names=F)
 
 nrow(ward14)
 length(unique(ward14$SSL2))
