@@ -14,7 +14,7 @@ This is a project to assist the Greater Columbia Heights Faith Coalition for Aff
 
 
 
-**Sources for Checking Records ***
+**Sources for Checking Records**
 
 [get address from SSL](http://citizenatlas.dc.gov/newwebservices/locationverifier.asmx?op=findAddFromSSL2)
 
