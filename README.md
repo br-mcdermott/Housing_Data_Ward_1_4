@@ -11,3 +11,11 @@ This is a project to assist the Greater Columbia Heights Faith Coalition for Aff
 * recongnize as early as possible when affordable housing units are under direct threat
 * predict which buildings are likely to be targetted for re-development or other potential loss of affordable units
 * identify areas/building with good potential for redevelopment as multi-income level developments.
+
+
+
+**Sources for Checking Records ***
+
+[get address from SSL](http://citizenatlas.dc.gov/newwebservices/locationverifier.asmx?op=findAddFromSSL2)
+
+[see all MAR services] (http://citizenatlas.dc.gov/newwebservices/locationverifier.asmx)
